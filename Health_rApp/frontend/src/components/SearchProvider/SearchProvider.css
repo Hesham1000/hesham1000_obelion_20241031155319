@@ -1,0 +1,90 @@
+.search-provider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+.provider-list {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.provider-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.provider-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.provider-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.provider-specialty {
+  color: #666;
+}
+
+.appointment-slots {
+  display: flex;
+  gap: 10px;
+}
+
+.appointment-slot {
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e7f0ff;
+}
+
+.appointment-slot:hover {
+  background-color: #cfe2ff;
+}
+
+.reminder {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff6f61;
+}
