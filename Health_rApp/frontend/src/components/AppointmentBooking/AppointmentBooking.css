@@ -1,0 +1,84 @@
+.appointment-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.search-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.search-section input[type="text"] {
+  width: calc(100% - 120px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-section button:hover {
+  background-color: #0056b3;
+}
+
+.provider-list {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.provider-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.provider-info {
+  flex-grow: 1;
+}
+
+.appointment-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-slot {
+  padding: 10px;
+  background-color: #ececec;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.time-slot.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.reminder {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
