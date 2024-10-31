@@ -13,6 +13,7 @@
     "dependencies": {
         "sequelize": "latest",
         "express": "latest",
+        "jsonwebtoken": "8.5.1",
         "cors": "latest",
         "mysql": "latest",
         "mysql2": "latest"
@@ -20,6 +21,7 @@
     "devDependencies": {
         "sequelize": "6.6.5",
         "express": "4.17.1",
+        "jsonwebtoken": "8.5.1",
         "bcrypt": "latest",
         "sequelize-cli": "6.10.0"
     }
