@@ -1,4 +1,7 @@
-const { Sequelize, Model } = require('sequelize');
+const express = require('express');
+const router = express.Router();
+const notificationController = require('../controllers/notificationController');
+const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('Health_rApp', 'root', 'root', {
   host: 'db',
@@ -6,41 +9,13 @@ const sequelize = new Sequelize('Health_rApp', 'root', 'root', {
   dialect: 'mysql'
 });
 
-class Appointment extends Model {
-  static init(sequelize) {
-    super.init({
-      id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-      },
-      patientId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      providerId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      slot: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-    }, {
-      sequelize,
-      modelName: 'Appointment',
-    });
-  }
-}
+sequelize.authenticate()
+  .then(() => console.log('Database connected...'))
+  .catch(err => console.log('Error: ' + err));
 
-class NotificationUtils {
-  static async notifyAppointmentBooked(userEmail, appointmentDetails) {
-    try {
-      console.log(`Notification sent to ${userEmail}:`, appointmentDetails);
-    } catch (error) {
-      console.error('Error sending notification:', error);
-    }
-  }
-}
+router.get('/notifications', notificationController.getNotifications);
+router.post('/notifications', notificationController.createNotification);
+router.put('/notifications/:id', notificationController.updateNotification);
+router.delete('/notifications/:id', notificationController.deleteNotification);
 
-module.exports = { Appointment, NotificationUtils };
+module.exports = router;

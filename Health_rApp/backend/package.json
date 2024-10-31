@@ -11,15 +11,16 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "sequelize": "6.6.5",
+        "sequelize": "latest",
         "express": "latest",
         "cors": "latest",
         "mysql": "latest",
         "mysql2": "latest"
     },
     "devDependencies": {
+        "sequelize": "6.6.5",
+        "express": "4.17.1",
         "bcrypt": "latest",
-        "sequelize": "5.22.3",
         "sequelize-cli": "6.10.0"
     }
 }
